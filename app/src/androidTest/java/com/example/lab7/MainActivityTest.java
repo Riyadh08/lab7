@@ -19,22 +19,47 @@ public class MainActivityTest {
         // Click the button
         Espresso.onView(ViewMatchers.withId(R.id.button)).perform(ViewActions.click());
 
-        // Check if the text view displays "Red!"
+
         Espresso.onView(ViewMatchers.withId(R.id.textView))
                 .check(ViewAssertions.matches(ViewMatchers.withText("1")));
+
+
+    }
+
+    @Test
+    public void testa()
+    {
+        Espresso.onView(ViewMatchers.withId(R.id.button2)).perform(ViewActions.click());
+
+
+        Espresso.onView(ViewMatchers.withId(R.id.textView2))
+                .check(ViewAssertions.matches(ViewMatchers.withText("2")));
     }
 
     @Test
     public void testButtonClick_2() {
-        // Click the button twice
+
         Espresso.onView(ViewMatchers.withId(R.id.button))
                 .perform(ViewActions.click())
                 .perform(ViewActions.click());
 
-        // Check if the text view displays "Green!"
+
         Espresso.onView(ViewMatchers.withId(R.id.textView))
                 .check(ViewAssertions.matches(ViewMatchers.withText("2")));
+
+//
+//        Espresso.onView(ViewMatchers.withId(R.id.button2))
+//                .perform(ViewActions.click())
+//                .perform(ViewActions.click());
+//
+//
+//        Espresso.onView(ViewMatchers.withId(R.id.textView2))
+//                .check(ViewAssertions.matches(ViewMatchers.withText("4")));
+
+
+
     }
+
 
 
 }
